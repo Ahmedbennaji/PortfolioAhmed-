@@ -1,6 +1,6 @@
 <template>
 <v-content>
-About me 
+Portfolio
 </v-content>
 </template>
 
@@ -8,7 +8,7 @@ About me
 // @ is an alias to /src
 
 export default {
-  name: "About", 
+  name: "Portfolio", 
 
 };
 </script>

@@ -1,26 +1,18 @@
 <template>
- 
-<v-app>
-  <v-app-bar
-  app
-  flat
-  
-  >
-  <Header/>
-  </v-app-bar>
-  <router-view></router-view>
-
-
-</v-app>
+  <v-app>
+    <v-app-bar app flat>
+      <Header />
+    </v-app-bar>
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script>
-import Header from './components/Header';
+import Header from "./components/Header";
 export default {
-  
-name:'App',
-components: {
-  Header,
-}
-}
+  name: "App",
+  components: {
+    Header
+  }
+};
 </script>

@@ -11,7 +11,6 @@
 
         <v-divider></v-divider>
       </v-responsive>
-
       <v-theme-provider light>
         <v-row>
           <v-col cols="12">
@@ -22,7 +21,7 @@
             <v-text-field flat label="Email*" solo></v-text-field>
           </v-col>
 
-          <v-col cols="12">
+          <v-col cols="2">
             <v-text-field flat label="Subject*" solo></v-text-field>
           </v-col>
 

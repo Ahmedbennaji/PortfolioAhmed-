@@ -140,19 +140,19 @@
 
         <v-theme-provider light>
           <v-row>
-            <v-col cols="12">
+            <v-col cols="5">
               <v-text-field flat label="Name*" solo></v-text-field>
             </v-col>
 
-            <v-col cols="12">
+            <v-col cols="5">
               <v-text-field flat label="Email*" solo></v-text-field>
             </v-col>
 
-            <v-col cols="12">
+            <v-col cols="5">
               <v-text-field flat label="Subject*" solo></v-text-field>
             </v-col>
 
-            <v-col cols="12">
+            <v-col cols="5">
               <v-textarea flat label="Message*" solo></v-textarea>
             </v-col>
 

@@ -54,17 +54,15 @@ export default {
           text: "jsadhladasd"
         },
         {
-          src:"",
+          src: "",
           title: "Battleship",
-          text:"wdlkaasd"
+          text: "wdlkaasd"
         },
         {
-          src:"",
+          src: "",
           title: "Social media platform",
-          text:"sjdnCklcsd;n"
-
-        },
-
+          text: "sjdnCklcsd;n"
+        }
       ]
     };
   }

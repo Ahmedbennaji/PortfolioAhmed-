@@ -1,18 +1,49 @@
 <template>
-  <v-content>
-    <div class="image">
+  <section id="hero">
+    <v-row no-gutters>
       <v-img
-        src="@/assets/background.jpg"
-        max-height="800"
-        max-width="1915"
-      ></v-img>
-    </div>
-    <h1 class="first line">Hello,I am Ahmed Naji.</h1>
-    <h1 class="secondline">I am a Computer Science Student</h1>
-    <h1 class="thirdline">
-      Welcome to <v-btn depressed color="error"> my portfolio </v-btn>
-    </h1>
-  </v-content>
+        :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
+        src="@/assets/111.jpg"
+      >
+        <v-theme-provider dark>
+          <v-container fill-height>
+            <v-row align="center" class="white--text mx-auto" justify="center">
+              <v-col class="white--text text-center" cols="12" tag="h1">
+                <span
+                  :class="[
+                    $vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2'
+                  ]"
+                  class="font-weight-light"
+                >
+                  WELCOME TO
+                </span>
+
+                <br />
+
+                <span
+                  :class="[
+                    $vuetify.breakpoint.smAndDown ? 'display-3' : 'display-4'
+                  ]"
+                  class="font-weight-black"
+                >
+                  MY PORTFOLIO
+                </span>
+              </v-col>
+
+              <v-btn
+                class="align-self-end"
+                fab
+                outlined
+                @click="$vuetify.goTo('#about-me')"
+              >
+                <v-icon>mdi-chevron-double-down</v-icon>
+              </v-btn>
+            </v-row>
+          </v-container>
+        </v-theme-provider>
+      </v-img>
+    </v-row>
+  </section>
 </template>
 
 <script>
@@ -22,35 +53,3 @@ export default {
   name: "Home"
 };
 </script>
-
-<style lang="scss" scoped>
-.image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-h1 {
-  margin-top: 200px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  margin-left: 90px;
-  position: absolute;
-  top: 200px;
-  left: 0;
-  width: 100%;
-}
-.secondline {
-  position: absolute;
-  top: 240px;
-  left: 0;
-  width: 100%;
-}
-.thirdline {
-  position: absolute;
-  top: 280px;
-  left: 0;
-  width: 100%;
-}
-</style>

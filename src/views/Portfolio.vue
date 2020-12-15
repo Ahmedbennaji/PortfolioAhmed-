@@ -1,73 +1,72 @@
 <template>
-  <v-card
-    class="pa-md-4 mx-lg-auto"
-    color="transparent"
-    width="1550px"
-    height="800px"
-  >
-    <v-row :align="align" style="height: 450px;">
-      <v-col v-for="n in 5" :key="n">
-        <v-card class="mx-auto" max-width="350">
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
-            :aspect-ratio="12 / 9"
-          >
-          </v-img>
-          <v-card-title>
-            <div class="display-1 mb-2">
-              Database Systems
-            </div>
-            <div class="title font-weight-regular grey--text">
-              Project description
-            </div>
-          </v-card-title>
-          <v-row class="px-4 grey--text" align="center">
-            <v-avatar size="18" class="mr-4">
-              <v-img
-                src="https://cdn.vuetifyjs.com/images/weather/part-cloud-48px.png"
-                contain
-              ></v-img>
-            </v-avatar>
+  <section id="features" class="grey lighten-3">
+    <div class="py-12"></div>
 
-            <span>81° / 62°</span>
-          </v-row>
+    <v-container class="text-center">
+      <h2 class="display-2 font-weight-bold mb-3">Portfolio</h2>
 
-          <v-divider class="mt-6 mx-4"></v-divider>
+      <v-responsive class="mx-auto mb-12" width="56">
+        <v-divider class="mb-1"></v-divider>
 
-          <v-card-text>
-            <v-chip class="mr-2" @click="github">
-              <v-icon left>
-                mdi-brightness-5
-              </v-icon>
-              github
-            </v-chip>
+        <v-divider></v-divider>
+      </v-responsive>
 
-            <v-chip @click="blinds">
-              <v-icon left>
-                mdi-blinds
-              </v-icon>
-              Demo
-            </v-chip>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-card>
+      <v-row>
+        <v-col
+          v-for="({ icon, title, text }, i) in projects"
+          :key="i"
+          cols="12"
+          md="4"
+        >
+          <v-card class="py-12 px-4" color="grey lighten-5" flat>
+            <v-theme-provider dark>
+              <div>
+                <v-avatar color="primary" size="88">
+                  <v-icon large v-text="icon"></v-icon>
+                </v-avatar>
+              </div>
+            </v-theme-provider>
+
+            <v-card-title
+              class="justify-center font-weight-black text-uppercase"
+              v-text="title"
+            ></v-card-title>
+
+            <v-card-text class="subtitle-1" v-text="text"> </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <div class="py-12"></div>
+  </section>
 </template>
-
 
 <script>
 export default {
-  methods: {
-    alarm() {
-      alert("Turning on alarm...");
-    },
-    blinds() {
-      alert("Toggling Blinds...");
-    },
-    lights() {
-      alert("Toggling lights...");
-    }
+  name: "Portfolio",
+  data() {
+    return {
+      projects: [
+        {
+          src: "",
+          title: "Chinook Web Application ",
+          text: "jsadhladasd"
+        },
+        {
+          src:"",
+          title: "Battleship",
+          text:"wdlkaasd"
+        },
+        {
+          src:"",
+          title: "Social media platform",
+          text:"sjdnCklcsd;n"
+
+        },
+
+      ]
+    };
   }
 };
 </script>
